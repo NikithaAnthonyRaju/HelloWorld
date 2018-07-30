@@ -35,6 +35,21 @@ public class string {
 //		upper/lower Case
 		System.out.println("Upper Case - "+ output1.toUpperCase());
 		System.out.println("Lower Case - "+ output2.toLowerCase());
+		 
+//		Convert String to Integer using Integer.parseInt()
+		String strTest = "100";
+		System.out.println("Actual String: "+ strTest);
+		System.out.println("Converted to Int: " + Integer.parseInt(strTest));
+		System.out.println("Arithmetic Operation on Int: " + (Integer.parseInt(strTest)/4));
+		
+//		Convert String to Integer using Integer.valueOf()		
+		String strTest1 = "120";
+		String strTest2 = "Ankitha";
+		System.out.println("Actual String: "+ strTest1);
+		System.out.println("Converted to Int: " + Integer.valueOf(strTest1));
+		System.out.println("Arithmetic Operation on Int: " + (Integer.valueOf(strTest1)/4));
+		System.out.println("Converted to Int (Error Msg): " + Integer.valueOf(strTest2));
+		
 		
 		
 		
