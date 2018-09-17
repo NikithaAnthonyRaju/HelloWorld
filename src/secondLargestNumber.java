@@ -1,5 +1,8 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class secondLargestNumber {
@@ -50,7 +53,17 @@ public class secondLargestNumber {
 		List<Integer> list = Arrays.asList(array);
 		Collections.sort(list);
 		System.out.println("Collection Sort - " + list.get(array.length - 2));
-
+		
+		List<Integer> a = new ArrayList<Integer>();
+		a.add(5);
+		a.add(43);
+		a.add(45);
+		a.add(3);
+		a.add(53);
+		
+		System.out.println(Collections.max(a));
+		System.out.println(Collections.min(a));
+					
+		}
 	}
 
-}
