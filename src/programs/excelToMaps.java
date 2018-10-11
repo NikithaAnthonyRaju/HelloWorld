@@ -15,7 +15,6 @@ public class excelToMaps {
 	public static void main(String[] args) throws Exception {
 
 		Map<String, List<String>> inputValue = excel();
-//		System.out.println(inputValue.get("Name"));
 		System.out.println(inputValue.get("Name").get(0));
 		System.out.println(inputValue.get("Joining Years").get(0));
 		System.out.println(inputValue.get("Technology").get(0));
@@ -51,7 +50,7 @@ public class excelToMaps {
 			}
 
 			map.put(key, listValues);
-//			System.out.println(map.entrySet());
+			System.out.println(map.entrySet());
 
 		}
 
