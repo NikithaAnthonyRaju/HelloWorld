@@ -18,13 +18,13 @@ public class CopyFileBasedonDateTime {
 		// CopyFileBasedonDateTime a = new CopyFileBasedonDateTime();		
 
 		File file = new File(System.getProperty("user.dir"));
-		System.out.println(file.getParent());
+		System.out.println("1"+file.getParent());
 		File file1 = new File(file.getParent());
-		System.out.println(file1.getParent());
+		System.out.println("2"+file1.getParent());
 		File path = new File(file1.getParent() + "/Downloads");
-		System.out.println(path);
+		System.out.println("3"+path);
 		File source = new File(path + "\\cidn_20180319211225.csv");
-		System.out.println(source);
+		System.out.println("4"+source);
 		FileUtils.moveFileToDirectory(source, file1, true);
 		System.out.println("file moved from " + source + " to " + file1);
 		File source2 = new File(file1 + "\\cidn_20180319211225.csv");

@@ -2,7 +2,7 @@ package programs;
 public class greatestNumber {
 
 //	static String[] A = new String[]{ "1", "2", "3" };
-	static int[] count = new int[] { 3, 2, 2, 1, 1, 1, 0 };
+	static int[] count = new int[] { 3, 2, 2, 1, 1, 1, 10, 0 };
 
 	public static void main(String[] args) {
 

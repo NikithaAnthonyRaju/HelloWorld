@@ -10,6 +10,7 @@ public class squareRoot {
         //getting input number from user to calculate square root
         double square = scanner.nextDouble();
         
+        
         //getting square root of a number in Java
         double squareRoot = Math.sqrt(square);
         

@@ -11,9 +11,10 @@ public class armstrongNumber {
 //		
 //		A
 //		
-		armsstrongNumber("882");
+//		armsstrongNumber("882");
 	
-
+		armsstrongNumber("Nikitha");
+		
 	}
 	
 	public static void armsstrongNumber(String str){

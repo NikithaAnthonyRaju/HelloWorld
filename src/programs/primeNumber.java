@@ -7,7 +7,7 @@ public class primeNumber {
 //		System.out.println(isPrimeNumber(15));
 //		System.out.println(isPrimeNumber(9));
 		
-		for(int i=0; i<=5;i++){
+		for(int i=0; i<=15;i++){
 
 			System.out.println(i +" = "+ isPrimeNumber(i));
 
