@@ -1,0 +1,149 @@
+﻿1) What are the limitations of selenium?
+
+
+Some limitations of Selenium Automation tool are as follows:
+It does not support and non web-based applications, it only supports web based applications.
+
+Its an open source tool so in case of any technical issues you need to rely on the selenium community forums to get your issue resolved.
+
+You need to know at least one of the supported language very well in order to automate your application successfully.
+
+No inbuilt reporting capability so you need plugins like JUnit and TestNG for test reports.
+
+Lot of challenges with IE browser.
+
+
+2) What are the different types of annotations which are used in Selenium?
+
+3) What is the difference between assert and verify commands?
+
+When an “assert” command fails, the test execution will be aborted. So when the Assertion fails, all the test steps after that line of code are skipped. The solution to overcoming this issue is to use a try-catch block. We use the Assertion in the try catch block. Mostly, the assert command is used when the end result of the check value should pass to continue to the next step.
+When a “verify” command fails, the test will continue executing and logging the failure. Mostly, the Verify command is used to check non-critical things. In such cases where we move forward even though the end result of the check value is failed.
+
+In simple words, there wont be any halt in the test execution even though the verify condition is true or false.
+
+
+4) What is the difference between type keys and type commands?
+- TypeKeys() will trigger JavaScript event in most of the cases whereas .type() won’t. 
+  Type key populates the value attribute using JavaScript whereas .typekeys() emulates like actual user typing
+
+5) What is the difference between sleep() and setSleep() method?
+- Sleep(): It suspends the current java thread for specified period of time. But one Thread.sleep() will set up wait only once. It takes the single argument in integer format. Syntax: Thread.sleep(3000) – It will wait for 3 seconds.
+  SetSpeed(): It stops the execution for every selenium command for a specific amount of time. It takes single argument.
+  Syntax: selenium.setSpeed("3000");
+
+6) What are the main technical problems occurred with Selenium tools?
+- Windows-based alerts, dynamically loaded content, 
+
+7) Which is the post release validation with continuous integration automation tool?
+- a way to immediately test and validate every deployment.
+  continuous testing service will allow you to run post-deploy smoke tests immediately after every deployment.
+  Report verification results
+  Reporting any issues found on production
+
+8) What were your roles and responsibilities and how was your time divided between tasks in a project?
+
+9) What QA process do you use in your project and why?
+
+10) What do you consider to be your key accomplishments/initiatives?
+
+11) Have you been involved in test estimation and how do you do it?
+- Analyze software requirement specification
+  Create the Test Specification
+  Execute the test cases
+  Report the defects
+
+12) How you conducted Batch Testing in your project?
+13) How you handled duplicate Elements in your project?
+14) How can we handle web based pop up?
+15) How to set the test case priority in TestNG?
+16) How to handle the AJAX popup window?
+- boolean ajaxPopup = new WebDriverWait(driver,10).until(ExpectedConditions.visibilityOfElementLocated(By.id("btnContinue"))) != null;
+  Assert.assertTrue(ajaxPopup);
+
+17) How do you read a JavaScript variable in Selenium WebDriver?
+- JavascriptExecutor js = (JavascriptExecutor) webdriver;
+  String sessionId = (String) js.executeScript("sessionId");
+  assertThat(sessionId, is(notNullValue());
+
+18) How to launch a batch file in a Selenium Webdriver project?
+- Process P1=Runtime.getRuntime.exec("PathOfBatchFile");
+  P1.waitFor();
+
+19)  What are the different exceptions you face in Selenium Webdriver?
+	WebDriverException,
+	NoAlertPresentException,
+	NoSuchWindowException,
+	NoSuchElementException,
+	TimeoutException.
+
+20)How would you fill a text field without calling the sendKeys()?
+- JavascriptExecutor JS = (JavascriptExecutor)webdriver;
+  JS.executeScript(“document.getElementById(User’).value=’Tech Zone'”);
+
+21) How would you handle the alert popups in Selenium Webdriver?
+22) How to login into any site if its showing any authetication popup for user name and pass ?
+23) What are the benefits of using TestNG ?
+24)  What are different components of your framework ?
+25. Count the number of links in a page.
+26)  What is the importance of testng.xml file?
+In a Selenium TestNG project, we use testng.xml file to configure the complete test suite in a single file. Some of the features are as follows.
+
+testng.xml file allows to include or exclude the execution of test methods and test groups
+It allows to pass parameters to the test cases
+Allows to add group dependencies
+Allows to add priorities to the test cases
+Allows to configure parallel execution of test cases
+Allows to parameterize the test cases
+
+27) How to pass parameter through testng.xml file to a test case?
+- <parameter name="author" value="Guru99" />
+<parameter name="searchKey" value="India" />
+ @Parameters({"author","searchKey"})
+
+28)  What is TestNG Assert and list out common TestNG Assertions?
+- Assert.assertEquals
+  Assert.assertTrue
+  Assert.assertFalse
+
+29) How to run a group of test cases using TestNG?
+- @Test (groups = { "bonding", "strong_ties" })	
+  <groups>		
+   <run>		
+    <include name="bonding" />		
+   </run>		
+  </groups>
+
+
+30) How to create Group of Groups in TestNG?
+
+31) How to run test cases in parallel using TestNG?
+- <suite name="TestSuite" thread-count="3" parallel="methods" >
+
+32) How to exclude a particular test method from a test case execution? 
+-  <classes>
+       <class name="com.easy.entry.AddTestCase">
+        <methods>
+        <include name="addLocationTestCase" />
+        <include name="addDepartmentTestCase" />
+        <exclude name="addEmployeeTestCase" />
+	<include value="testGuru99TC1" dependsOnMethods=" testGuru99TC2"/>
+      </methods>
+
+33) How to disable a test case in TestNG ?
+-   @Test(enabled = false)
+
+34) How to skip a @Test method from execution in TestNG?
+- @Test(enabled=false)
+  throw new SkipException("message");
+
+35) What are @Factory and @DataProvider annotation?
+
+DataProvider: A test method that uses DataProvider will be executed a multiple number of times based on the data provided by the DataProvider. The test method will be executed using the same instance of the test class to which the test method belongs.
+Factory: A factory will execute all the test methods present inside a test class using a separate instance of the respective class.
+
+CSX_PDM_IT_June_Release_0609.jmx
+
+"refreshAndWait" Command in selenium
+In above example, there is one more command with name "refreshAndWait". It will refresh the page and will wait until page not get reloaded properly.
+
